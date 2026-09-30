@@ -14,7 +14,8 @@ jobs:
         run: echo "${{ toJson(github) }}"
 
       - name: Print environment variables
-        run: |
-          printenv
-          echo "$GITHUB_SHA"
+        run: printenv
+
+      - name: Print latest commit id
+        run: echo "$GITHUB_SHA"
         
