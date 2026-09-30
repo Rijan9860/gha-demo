@@ -10,12 +10,12 @@ jobs:
           echo "The repository name is ${{ github.repository }}"
           echo "The branch is ${{ github.ref_name }}"
 
-      - name: Print all variables under github
+      - name: Print all context variables under github
         run: echo "${{ toJson(github) }}"
 
-      - name: Print environment variables
+      - name: Print all environment variables
         run: printenv
 
-      - name: Print latest commit id
+      - name: Print environment variables
         run: echo "$GITHUB_SHA"
         
